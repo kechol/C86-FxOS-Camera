@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
   "name": "C86-FxOS-Camera",
-  "description": "A template with the bare minimum structure",
+  "description": "C86 Camera is the sample app for FxOS Camera APIs",
   "launch_path": "/index.html",
   "icons": {
     "16": "/img/icons/icon16x16.png",
@@ -10,20 +10,17 @@
     "128": "/img/icons/icon128x128.png"
   },
   "developer": {
-    "name": "Your name",
-    "url": "http://example.com"
+    "name": "Kazuyuki Suzuki",
+    "url": "http://kechol.net/"
   },
   "type": "privileged",
-  "permissions": {},
+  "permissions": {
+    "camera": {},
+    "video-capture": {}
+  },
   "installs_allowed_from": [
     "*"
   ],
-  "locales": {
-    "es": {
-      "name": "Aplicación vacía privilegiada",
-      "description": "Una plantilla con la mínima estructura",
-      "permissions": {}
-    }
-  },
-  "default_locale": "en"
+  "default_locale": "en",
+  "orientation": ["portrait"]
 }
