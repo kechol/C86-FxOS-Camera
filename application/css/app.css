@@ -1,9 +1,10 @@
 html, body {
   margin: 0;
-  padding: 0.5rem;
+  padding: 0;
 }
 
 body {
+  padding: 0.5rem;
   font-size: 1rem;
   background: #fff;
 }
@@ -16,3 +17,16 @@ p {
   font-size: inherit;
 }
 
+button {
+  margin: 0.5rem 0.5rem 0 0;
+  display: inline-block;
+  min-width: 80px;
+  min-height: 30px;
+  font-size: 1.1rem;
+}
+
+canvas, video {
+  display: block;
+  margin: 0 -0.5rem;
+  background: #f0f0f0;
+}
