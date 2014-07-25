@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', function() {
   // fallback to prefixed API
   navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia;
 
-  var captureBtn    = document.getElementById('captureButton')
+  var captureBtn = document.getElementById('captureButton')
     , video  = document.getElementById('video')
     , canvas = document.getElementById('canvas');
 
@@ -17,11 +17,8 @@ window.addEventListener('DOMContentLoaded', function() {
   var onSuccess = function(stream) {
     console.log('SUCCESS(getUserMedia): ', stream);
 
-    // set the stream to video source
-    var url = URL.createObjectURL(stream);
-
     // play the video
-    video.src = url;
+    video.mozSrcObject = stream;
     video.play();
   };
 

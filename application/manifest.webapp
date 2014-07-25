@@ -16,7 +16,9 @@
   "type": "privileged",
   "permissions": {
     "camera": {},
-    "video-capture": {}
+    "video-capture": {},
+    "device-storage:videos":{ "access": "readwrite" },
+    "device-storage:pictures":{ "access": "readwrite" }
   },
   "installs_allowed_from": [
     "*"
