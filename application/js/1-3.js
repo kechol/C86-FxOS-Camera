@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', function() {
     captureBtn.addEventListener('click', function(e) {
       // take a picture
       var picOptions = {
-        pictureSize: camera.capabilities.pictureSizes[2], // width: 1920, height: 1080
+        pictureSize: camera.capabilities.pictureSizes[0], // width: 1920, height: 1080
         fileFormat: camera.capabilities.fileFormats[0] // jpeg
       };
       camera.takePicture(picOptions, onPictureTaken, onError);
@@ -58,13 +58,6 @@ window.addEventListener('DOMContentLoaded', function() {
         console.log('INFO(effect): change effect', effects[effectIndex]);
       }, false);
     }
-  };
-
-  var onStreamReady = function(stream) {
-    console.log('SUCCESS(stream): ', stream);
-    var video = document.getElementById('video');
-    video.src = stream;
-    video.play();
   };
 
   var onPictureTaken = function(blob) {
